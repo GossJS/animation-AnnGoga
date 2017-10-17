@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AnkaGo</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Anna Golubeva">
+    <style>  
+  
+      @keyframes translateAnimation{
+        from {}
+        to { transform: translateX(1500px) }
+      }
+  
+      @keyframes rotateAnimation{
+        from {}
+        to { transform: rotate(1000deg) }
+      }
+  
+      #cont{ 
+        position: absolute;  
+        left: 0; 
+        top: calc(50% - 75px );
+        animation:  translateAnimation  10s infinite linear;
+      }
+  
+      #circle{
+        background: linear-gradient(to bottom, 
+                                    #FFEBCD 0%,
+                                    #FFEBCD 10%, 
+                                    #FFE4C4 20%,
+                                    #FFE4C4 30%, 
+                                    #FFDEAD 51%, 
+                                    #FFDEAD 55%,
+                                    #DEB887 100%);
+        width: 150px; 
+        height: 150px;
+        border-radius: 100%; 
+        text-align: center; 
+        display: table-cell;
+        font-family: sans-serif;
+        font-size: 25px;
+        vertical-align: middle;
+        animation:  rotateAnimation  17s infinite linear;
+      }
+        
+      #circle:hover{ 
+        animation-play-state: paused;
+        color: DarkTurquoise;
+      }
+      
+    </style>
+
+  </head>
+ <body>
+  <h4 id="author" title="GossJS">Анна Голубева</h4>
+  <div id="cont"><div id="circle">Golubeva's Kolobok</div></div>
+ </body>
+</html>
